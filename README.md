@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Galería de Imágenes con Next.js 📸
 
-## Getting Started
+Una aplicación web moderna construida con Next.js que permite a los usuarios subir, visualizar y filtrar imágenes por fecha. La aplicación proporciona una interfaz intuitiva para gestionar tu colección de imágenes con potentes capacidades de filtrado.
 
-First, run the development server:
+## 🚀 Características
+
+- Subida de imágenes con soporte para arrastrar y soltar
+- Vista de galería con diseño en mosaico
+- Filtrado de imágenes por fecha
+- Diseño responsivo para todos los dispositivos
+- Vista previa de imágenes en tiempo real
+- Carga perezosa para un rendimiento óptimo
+- Capacidades avanzadas de búsqueda y filtrado
+
+## 🖼️ Vista Previa
+
+### Vista Principal de la Galería
+![Vista Principal](public/vista-principal-galeria.png)
+*Vista principal de la galería mostrando el diseño en mosaico de las imágenes*
+
+### Interfaz de Subida
+![Interfaz de Subida](public/zona-de-arrastre.png)
+*Interfaz de arrastrar y soltar para una fácil subida de imágenes*
+
+### Sistema de Filtros
+![Sistema de Filtros](public/sistema-filtros.png)
+*Sistema de filtrado por fecha con integración de calendario*
+
+### Vista Móvil
+![Interfaz Móvil](public/vista-movil.png)
+*Diseño responsivo optimizado para dispositivos móviles*
+
+## 🛠️ Tecnologías Utilizadas
+
+- Next.js 15
+- React
+- Tailwind CSS
+- Shadcn-UI
+- TypeScript
+- Integración con API Backend Nestjs
+
+## 🚀 Comenzando
+
+### Requisitos Previos
+
+- Node.js 18.0 o superior
+- npm o yarn
+- Git
+
+### Instalación
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/redmoart23/images-api-loggro-restobar-client.git
+```
+
+2. Navega al directorio del proyecto:
+```bash
+cd images-api-loggro-restobar-client
+```
+
+3. Instala las dependencias:
+```bash
+npm install
+# o
+yarn install
+```
+
+4. Crea un archivo `.env.local` en el directorio raíz y añade tus variables de entorno:
+```env
+NEXT_PUBLIC_API_URL=https://api.tudominio.com
+```
+
+### Ejecutar el Servidor de Desarrollo
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Construir para Producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# o
+yarn build
+```
 
-## Learn More
+## 🔗 Integración con la API
 
-To learn more about Next.js, take a look at the following resources:
+La aplicación se conecta a una API backend para el almacenamiento y recuperación de imágenes. Los endpoints de la API son:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `POST /api/images` - Subir nuevas imágenes
+- `GET /api/images` - Obtener todas las imágenes
+- `GET /api/images/search` - Obtener imágenes filtradas por fecha
+- `DELETE /api/images/:id` - Eliminar una imagen
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+URL de ejemplo de la API: `https://api.imagegallery.com/v1`
 
-## Deploy on Vercel
+## 📁 Estructura del Proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+├── src/
+│   ├── app/
+│   ├── components/
+│   │   ├── Gallery/
+│   │   ├── Upload/
+│   │   └── Filter/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+├── public/
+├── .env.local
+└── package.json
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Cómo Contribuir
+
+1. Haz un fork del repositorio
+2. Crea tu rama de características (`git checkout -b feature/NuevaCaracteristica`)
+3. Haz commit de tus cambios (`git commit -m 'Añadir alguna NuevaCaracteristica'`)
+4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+## 📞 Soporte
+
+Para soporte, envía un correo a redmoart@gmail.com o crea un issue en el repositorio.
